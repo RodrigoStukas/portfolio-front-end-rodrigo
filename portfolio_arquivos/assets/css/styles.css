@@ -1,0 +1,600 @@
+/* styles.css */
+@charset "UTF-8";
+/* Font imports and basic reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg: #fdfdfd;
+  --bg-header: #fdfdfd;
+  --text: #111;
+  --muted: #666;
+  --accent: #0b83d8;
+  --card: #f3f8fab6; 
+  --border-color: rgba(5, 46, 230, 0.76);
+  --bg-nav: #0b83d8;
+  --bg-gradient: linear-gradient(90deg, #9fd6f7, #0b83d8, #064b7d);
+  --text-title:#0b83d8;
+  --shadow-color:rgba(0, 0, 0, .2);
+  --background-projects: #0b83d8;
+  --background-Github: #082bc5;
+  --bottom:#0b83d8;
+  --bottom-hover: #082bc5;
+  --barra-de-porcetagem: linear-gradient(90deg, #bebebe, rgba(0, 0, 0, .1));
+
+  --dark-bg: #0b061f;;
+  --dark-bg-header:#0b061f;
+  --dark-text: #e9eef6;
+  --dark-card: #28188393;
+  --dark-bg-nav: #5a46b8;
+  --dark-border-color: rgba(104, 160, 177, 0.76);
+  --dark-gradient: linear-gradient(90deg, #b3a9ff , #5a46b8, #281883);
+  --dark-accent: #5a46b8;
+  --dark-text-title: #b3a9ff;
+  --dark-shadow-color: rgba(0, 0, 0, .7);
+  --dark-background-projects: #7a71c0;
+  --dark-background-Github:#5a46b8;
+  --dark-bottom: #28188393;
+  --dark-bottom-hover: #7a71c0;
+  --dark-barra-de-porcetagem: linear-gradient(90deg, #e6eefb, #ffffff);
+  
+  
+}
+
+html[data-theme="light"] {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html[data-theme="dark"] {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  --bg-header: var(--dark-bg-header);
+  --card: var(--dark-card);
+  --border-color: var(--dark-border-color);
+  --bg-nav: var(--dark-bg-nav);
+  --bg-gradient: var(--dark-gradient);
+  --accent: var(--dark-accent);
+  --text-title: var(--dark-text-title);
+  --shadow-color: var(--dark-shadow-color);
+  --title-color-projects: var(--dark-title-color-projects);
+  --background-projects: var(--dark-background-projects);
+  --background-Github: var(--dark-background-Github);
+  --bottom: var(--dark-bottom);
+  --bottom-hover: var(--dark-bottom-hover);
+  --barra-de-porcetagem: var(--dark-barra-de-porcetagem);
+}
+
+.container {
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* Header styles */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+  background: var(--bg-header);
+  box-shadow: 0 .1rem 1rem var(--shadow-color);
+  padding: 9px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content:space-between; /* mantém logo à esquerda e ações à direita */
+  z-index: 100; /* garante que o header fique acima de outros elementos */
+  padding: 0.5rem 1rem;
+}
+
+
+.brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-title);
+  font-size: 18px;
+}
+
+/* Navigation styles */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto ; /* move nav to the right */
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: auto 15px auto auto;
+  padding: 0;
+}
+
+.main-nav a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--text-color); 
+}
+
+.main-nav a:hover {
+  background: var(--bg-nav);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.theme-btn,
+.menu-btn {
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.theme-btn img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover img {
+  transform: rotate(15deg);
+}
+
+
+/* Social Media styles */
+  .social-media {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0px;
+    margin-top: 18px;
+}
+
+
+  .social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    box-shadow: 5 0.2rem 0.5rem var(--shadow-color);
+    font-size: 29px;
+    color: var(--accent);
+    transition: -11.6s ease;
+    margin: 1px;
+    text-decoration: none;
+}
+
+
+.social-media a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+/* MOBILE */
+/* Esconde o menu por padrão em telas pequenas */
+@media (max-width: 1024px) {
+  
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+}
+
+/* Em telas grandes, mostra o menu e esconde o botão */
+@media (min-width: 1025px) {
+  .main-nav {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
+
+
+.theme-btn {
+  background: none;
+  padding: 9px 4px 2px 4px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0;
+  display: flex;
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap; /* permite quebra de linha */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 640px;
+}
+
+.hero-left h3 {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.cta {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  background: var(--bottom);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.btn:hover {
+  background: var(--bottom-hover);
+  color: white;
+}
+
+.btn.outline {
+  background:var(--bottom);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn.outline:hover {
+  background: var(--bottom-hover);
+  color: white;
+}
+
+/* Skill card on hero right */
+.hero-right {
+  width: 320px;
+  border-radius: 10px;
+}
+
+.skill-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 18px var(--border-color);
+  margin: 10px;
+}
+
+.skill-card h4 {
+  color: var(--text-title);
+  margin-bottom: 6px;
+}
+
+.language-card {
+  margin-top: 12px;
+  background: transparent;
+  padding-top: 8px;
+}
+
+.language-card h5 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Sections */
+.section {
+  padding: 180px 90px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.about p {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.skill-group {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px var(--border-color);
+}
+
+.skill-group h3 {
+  color: var(--text-title);
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.skill-item:first-of-type {
+  border-top: 0;
+}
+
+.skill-item span {
+  font-weight: 700;
+}
+
+.goals p {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.7;
+}
+/* Barra de progresso de habilidades e linguagens */
+.bar {
+  position: relative;
+  background: var(--barra-de-porcetagem);
+  height: 12px;
+  border-radius: 8px;
+  overflow: visible; /* importante para mostrar o balão */
+}
+
+.fill {
+  height: 100%;
+  background: var(--bg-gradient);
+  position: relative;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Balão de porcentagem */
+.fill::after {
+  content: attr(data-percent);
+  position: absolute;
+  top: -31px;
+  right: 0;
+  background: var(--accent);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-family: "poppins", "sans-serif";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover: mostra balão e destaca barra */
+.fill:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fill:hover {
+  transform: scaleY(1.6);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  z-index: 5;
+}
+
+
+/* Projects */
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+.project-card {
+    background: var(--card);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem 2rem 2rem;
+    width: 100%;
+    max-width: 348px;
+    min-height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border: 2px solid transparent;
+    overflow: hidden;
+    animation: fadeInUp 0.7s;
+    box-shadow: 0px 0px 30px var(--border-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card a {
+  text-decoration: none;
+}
+
+.project-card:hover {
+  background: var(--background-projects);
+  color: #fff;
+}
+
+.project-card .project-lang {
+color: var(--title-color-projects);
+}
+
+
+.repo-link {
+  background: var(--background-Github);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.repo-link:hover {
+  background: #fff;
+  color: var(--background-Github);
+  border: 1px solid var(--accent);
+}
+.project-card h3 a,
+.project-card h3 a:visited {
+  color: var(--title-color-projects); /* ou qualquer cor que você queira */
+  text-decoration: none;
+}
+
+.project-card:hover h3 a,
+.project-card:hover .project-lang,
+.project-card:hover .project-meta span {
+  color: #fff;
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Responsive adjustments */
+@media(max-width: 1024px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 30px;
+}
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media(max-width: 950px) {
+  .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+  background: var(--bg-header);
+  padding: 0.5rem 1rem;
+}
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+  .hero-inner {
+    display: flex
+;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 59px;
+  }
+
+  .hero-right {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+}

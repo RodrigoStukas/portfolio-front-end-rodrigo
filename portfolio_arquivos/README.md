@@ -24,7 +24,7 @@ Este portfólio foi desenvolvido para apresentar minha trajetória profissional,
 
 ## 👀 Visualização do Projeto
 
-![Meu Portfolio](assets/img/portfolio-rodrigo.png)
+![Meu Portfolio](assets/img/portfolio-rodrigo.gif)
 
 
 ## 🚀 Como Visualizar o Projeto

@@ -1,15 +1,15 @@
-// script.js - menu and theme toggle (ids use 'trd' prefix)
+// script.js - alternância de menu e tema (os ids usam prefixo 'trd')
 const trdMenuBtn = document.getElementById('trdMenuBtn');
 const trdNav = document.getElementById('trdNav');
 const trdThemeBtn = document.getElementById('trdThemeBtn');
 const htmlEl = document.documentElement;
 
-// toggle navigation menu
+// alternar menu de navegação
 trdMenuBtn.addEventListener('click', () => {
   trdNav.classList.toggle('open');
 });
 
-// theme toggle (persist choice in localStorage)
+// alternar tema (salvar escolha no localStorage)
 const storedTheme = localStorage.getItem('trd_theme');
 if (storedTheme) {
   htmlEl.setAttribute('data-theme', storedTheme);

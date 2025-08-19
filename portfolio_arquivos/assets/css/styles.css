@@ -598,3 +598,68 @@ color: var(--title-color-projects);
     font-size: 16px;
   }
 }
+
+@media (max-width: 420px) {
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-left h3 {
+    font-size: 16px;
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn, .btn.outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skill-card,
+  .skill-group,
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .section {
+    padding: 100px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  .repo-link {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .social-media a {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+}

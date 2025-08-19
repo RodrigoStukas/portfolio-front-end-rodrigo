@@ -30,8 +30,10 @@ Este portfólio foi desenvolvido para apresentar minha trajetória profissional,
 ## 🚀 Como Visualizar o Projeto
 
 Para abrir o portfólio localmente:
+1. Link do projeto:
+[Visualizar o Projeto Online](https://portfolio-front-end-rodrigo-eight.vercel.app/#projetos)
 
-1. Clone o repositório:
+2. Clone o repositório:
 
 ```bash
 git clone https://github.com/RodrigoStukas/portfolio-rodrigo.git

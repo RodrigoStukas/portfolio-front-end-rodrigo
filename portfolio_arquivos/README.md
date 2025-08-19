@@ -22,6 +22,11 @@ Este portfólio foi desenvolvido para apresentar minha trajetória profissional,
 - **CSS3**: Estilos, layout responsivo e animações.
 - **JavaScript**: Interatividade (menu toggle, dark/light mode e carregamento de projetos do GitHub).
 
+## 👀 Visualização do Projeto
+
+![Meu Portfolio](assets/img/portfolio-rodrigo.png)
+
+
 ## 🚀 Como Visualizar o Projeto
 
 Para abrir o portfólio localmente:

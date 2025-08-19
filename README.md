@@ -8,8 +8,6 @@ Este projeto é uma demonstração dos meus conhecimentos em Front-End, incluind
 - HTML5
 - CSS3
 - JavaScript
-- TypeScript
-- React (opcional, se estiver usando)
 
 ## 🌐 Acesse
 [Portfólio Online](https://portfolio-front-end-rodrigo-eight.vercel.app/#home)

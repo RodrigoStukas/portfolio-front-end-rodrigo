@@ -2,7 +2,7 @@
 
 👋 Bem-vindo(a) ao meu portfólio!
 
-Este projeto é uma demonstração dos meus conhecimentos em Front-End, incluindo HTML, CSS, JavaScript e TypeScript. Ele serve como vitrine para meus projetos e aprendizados na área de desenvolvimento web.
+Este projeto é uma demonstração dos meus conhecimentos em Front-End, incluindo HTML, CSS e JavaScript. Ele serve como vitrine para meus projetos e aprendizados na área de desenvolvimento web.
 
 ## 🚀 Tecnologias
 - HTML5

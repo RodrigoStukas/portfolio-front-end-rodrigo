@@ -29,6 +29,11 @@ body {
   --bottom:#0b83d8;
   --bottom-hover: #082bc5;
   --barra-de-porcetagem: linear-gradient(90deg, #bebebe, rgba(0, 0, 0, .1));
+  --hover-chip: rgba(0, 0, 0, 0.06);
+  --border-chip: rgba(0, 0, 0, 0.08);
+  --background-chip: rgba(0, 0, 0, 0.04); 
+  --text-title-chip: #1d1d1d;
+  
 
   --dark-bg: #0b061f;;
   --dark-bg-header:#0b061f;
@@ -45,8 +50,10 @@ body {
   --dark-bottom: #28188393;
   --dark-bottom-hover: #7a71c0;
   --dark-barra-de-porcetagem: linear-gradient(90deg, #e6eefb, #ffffff);
-  
-  
+  --dark-hover-chip: rgba(255, 255, 255, 0.12);
+  --dark-border-chip: rgba(255, 255, 255, 0.08);
+  --dark-background-chip: rgba(255, 255, 255, 0.06);
+  --dark-text-title-chip: #faf5f5f8;
 }
 
 html[data-theme="light"] {
@@ -71,6 +78,11 @@ html[data-theme="dark"] {
   --bottom: var(--dark-bottom);
   --bottom-hover: var(--dark-bottom-hover);
   --barra-de-porcetagem: var(--dark-barra-de-porcetagem);
+  --hover-chip: var(--dark-hover-chip);
+  --border-chip: var(--dark-border-chip);
+  --background-chip: var(--dark-background-chip);
+  --text-title-chip: var(--dark-text-title-chip);
+  
 }
 
 .container {
@@ -397,6 +409,49 @@ html[data-theme="dark"] {
 
 .skill-item span {
   font-weight: 700;
+}
+
+/* Lista de chips */
+.skill-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Skill chip */
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--background-chip);
+  border: 1px solid var(--border-chip);
+  color: var(--text-title-chip);
+  backdrop-filter: blur(2px);
+  transition: transform 0.2s ease, background 0.2s ease;
+  width: 100%;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  background: var(--hover-chip);
+}
+
+.skill-chip i,
+.skill-chip .emoji {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.skill-chip span {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .goals p {

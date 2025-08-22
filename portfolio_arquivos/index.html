@@ -6,10 +6,12 @@
   <title>portfolio-front-end-rodrigo</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <!-- Devicon para ícones de tecnologia -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <meta name="description" content="Portfólio de Rodrigo Stukas">
   <meta name="keywords" content="Portfólio, Rodrigo Stukas, Desenvolvedor Front-End, HTML, CSS, JavaScript, TypeScript">
   <meta name="author" content="Rodrigo Stukas">
-  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header class="site-header">
@@ -87,34 +89,92 @@
       <p>Seja resolvendo incidentes no suporte, automatizando processos ou desenvolvendo interfaces modernas, mantenho sempre a mesma essência: buscar a excelência, entregar valor através da tecnologia e nunca parar de evoluir.</p>
     </section>
 
-    <section id="habilidades" class="section skills container">
-      <h2>Minhas Habilidades</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Front-End / Tecnologias</h3>
-          <div class="skill-item"><span>HTML5</span><div class="bar"><div class="fill fill-html" style="width:50%" data-percent="50%"></div></div><small>Básico</small></div>
-          <div class="skill-item"><span>CSS3</span><div class="bar"><div class="fill fill-css" style="width:50%" data-percent="50%"></div></div><small>Básico</small></div>
-          <div class="skill-item"><span>JavaScript</span><div class="bar"><div class="fill fill-js" style="width:35%" data-percent="35%"></div></div><small>Básico</small></div>
-          <div class="skill-item"><span>TypeScript</span><div class="bar"><div class="fill fill-ts" style="width:25%" data-percent="25%"></div></div><small>Básico</small></div>
-        </div>
+<section id="habilidades" class="section skills container">
+  <h2>Minhas Habilidades</h2>
+  <div class="skills-grid">
 
-        <div class="skill-group">
-          <h3>Ferramentas</h3>
-          <div class="skill-item"><span>Windows / Ferramentas corporativas</span><div class="bar"><div class="fill" style="width:60%" data-percent="60%"></div></div><small>Intermediário</small></div>
-          <div class="skill-item"><span>Scripting (BAT)</span><div class="bar"><div class="fill" style="width:44%" data-percent="44%"></div></div><small>Básico</small></div>
-          <div class="skill-item"><span>Visual Studio Code</span><div class="bar"><div class="fill" style="width:55%" data-percent="55%"></div></div><small>Básico</small></div>
-          <div class="skill-item"><span>Git/GitHub</span><div class="bar"><div class="fill" style="width:42%" data-percent="42%"></div></div><small>Básico</small></div>
-        </div>
+    <!-- Front-End / Tecnologias -->
+    <div class="skill-group">
+      <h3>Front-End / Tecnologias</h3>
+      <ul class="skill-list">
 
-        <div class="skill-group">
-          <h3>Soft Skills</h3>
-          <div class="skill-item"><span>Comunicação</span><div class="bar"><div class="fill" style="width:85%" data-percent="85%"></div></div><small>Avançado</small></div>
-          <div class="skill-item"><span>Resolução de Problemas</span><div class="bar"><div class="fill" style="width:80%" data-percent="80%"></div></div><small>Intermediário</small></div>
-          <div class="skill-item"><span>Trabalho em Equipe</span><div class="bar"><div class="fill" style="width:92%" data-percent="92%"></div></div><small>Avançado</small></div>
-          <div class="skill-item"><span>Adaptabilidade</span><div class="bar"><div class="fill" style="width:87%" data-percent="87%"></div></div><small>Intermediário</small></div>
-        </div>
-      </div>
-    </section>
+        <li class="skill-chip">
+          <i class="devicon-html5-plain colored" title="Criação de estruturas semânticas e acessíveis para páginas web."></i><span title="Criação de estruturas semânticas e acessíveis para páginas web.">HTML5</span>
+        </li>
+
+        <li class="skill-chip">
+          <i class="devicon-css3-plain colored" title="Estilização responsiva e moderna com foco em usabilidade."></i><span title="Estilização responsiva e moderna com foco em usabilidade.">CSS3</span>
+        </li>
+
+        <li class="skill-chip">
+          <i class="devicon-javascript-plain colored" title="Interatividade e lógica para aplicações web dinâmicas."></i><span title="Interatividade e lógica para aplicações web dinâmicas.">JavaScript</span>
+        </li>
+
+        <li class="skill-chip">
+          <i class="devicon-typescript-plain colored" title="Programação tipada para maior segurança e escalabilidade."></i><span title="Programação tipada para maior segurança e escalabilidade.">TypeScript</span> 
+        </li>
+
+         <li class="skill-chip">
+          <i class="devicon-git-plain colored" title="Ferramenta para salvar e acompanhar mudanças no código."></i><span title="Ferramenta para salvar e acompanhar mudanças no código.">Git</span>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Ferramentas -->
+    <div class="skill-group">
+      <h3>Ferramentas</h3>
+      <ul class="skill-list">
+        <li class="skill-chip">
+          <i class="devicon-windows8-original colored" title="Experiência com sistemas operacionais Windows voltados para ambientes corporativos."></i><span title="Experiência com sistemas operacionais Windows voltados para ambientes corporativos.">Windows / Corporativo</span>
+        </li>
+
+        <li class="skill-chip">
+          <i class="devicon-vscode-plain colored" title="Editor usado para escrever e organizar códigos."></i><span title="Editor usado para escrever e organizar códigos.">VS Code</span>
+        </li>
+
+          <li class="skill-chip">
+            <i class="devicon-chrome-plain colored" title="Ferramentas de inspeção e debug no navegador."></i><span title="Ferramentas de inspeção e debug no navegador.">Chrome DevTools</span>
+          </li>
+
+        <li class="skill-chip">
+          <i class="devicon-github-original" title="Plataforma para guardar projetos e colaborar com outras pessoas."></i><span title="Plataforma para guardar projetos e colaborar com outras pessoas.">GitHub</span>
+        </li>
+
+        <li class="skill-chip">
+          <i class="devicon-figma-plain colored" title="Ferramenta de design para criar protótipos e interfaces."></i><span title="Ferramenta de design para criar protótipos e interfaces.">Figma</span>
+
+      </ul>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="skill-group">
+      <h3>Soft Skills</h3>
+      <ul class="skill-list">
+
+        <li class="skill-chip">
+          <span class="emoji" title="Boa comunicação com colegas e clientes.">🗣</span><span title="Boa comunicação com colegas e clientes.">Comunicação</span>
+        </li>
+
+        <li class="skill-chip">
+          <span class="emoji" title="Sabe lidar com desafios e encontrar soluções.">🧩</span><span title="Sabe lidar com desafios e encontrar soluções.">Resolução de Problemas</span>
+        </li>
+
+        <li class="skill-chip">
+          <span class="emoji" title="Trabalha bem com outras pessoas.">🤝</span><span title="Trabalha bem com outras pessoas.">Trabalho em Equipe</span>
+        </li>
+
+        <li class="skill-chip">
+          <span class="emoji" title="Se adapta fácil a mudanças.">🔄</span><span title="Se adapta fácil a mudanças.">Adaptabilidade</span>
+        </li>
+
+        <li class="skill-chip">
+          <span class="emoji" title="Busca constante por novos conhecimentos e melhorias.">📚</span><span title="Busca constante por novos conhecimentos e melhorias.">Aprendizado Contínuo</span>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
     <section id="objetivo" class="section goals container">
       <h2>Meus Objetivos</h2>

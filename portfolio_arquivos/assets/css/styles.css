@@ -29,7 +29,7 @@ body {
   --bottom:#0b83d8;
   --bottom-hover: #082bc5;
   --barra-de-porcetagem: linear-gradient(90deg, #bebebe, rgba(0, 0, 0, .1));
-  --hover-chip: rgba(0, 0, 0, 0.06);
+  --hover-chip: rgba(0, 0, 0, 0.14);
   --border-chip: rgba(0, 0, 0, 0.08);
   --background-chip: rgba(0, 0, 0, 0.04); 
   --text-title-chip: #1d1d1d;
@@ -520,21 +520,20 @@ html[data-theme="dark"] {
     justify-content: center;
 }
 .project-card {
-    background: var(--card);
-    border-radius: 1.5rem;
-    padding: 2.5rem 2rem 2rem 2rem;
-    width: 100%;
-    max-width: 348px;
-    min-height: 245px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    border: 2px solid transparent;
-    overflow: hidden;
-    animation: fadeInUp 0.7s;
-    box-shadow: 0px 0px 30px var(--border-color);
-    transition: background 0.3s ease, color 0.3s ease;
+  background: var(--card);
+  border-radius: 1.5rem;
+  border: 2px solid transparent;
+  overflow: hidden;
+  width: 100%;
+  max-width: 348px;
+  box-shadow: 0px 0px 30px var(--border-color);
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.7s;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.7s;
+  overflow: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .project-card a {
@@ -544,20 +543,42 @@ html[data-theme="dark"] {
 .project-card:hover {
   background: var(--background-projects);
   color: #fff;
+  transform: scale(1.02);
 }
 
 .project-card .project-lang {
 color: var(--title-color-projects);
 }
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
 
+.project-overlay {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  
+}
 
 .repo-link {
   background: var(--background-Github);
   color: #fff;
   padding: 8px 16px;
   border-radius: 8px;
+  font-weight: bold;
   text-align: center;
   transition: all 0.3s ease;
+  margin-top: 8px;
 }
 
 
@@ -566,9 +587,15 @@ color: var(--title-color-projects);
   color: var(--background-Github);
   border: 1px solid var(--accent);
 }
+
+.repo-link i.devicon-github-original {
+    font-size: 19px;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
 .project-card h3 a,
 .project-card h3 a:visited {
-  color: var(--title-color-projects); /* ou qualquer cor que você queira */
+  color: var(--title-color-projects);
   text-decoration: none;
 }
 
@@ -577,12 +604,30 @@ color: var(--title-color-projects);
 .project-card:hover .project-meta span {
   color: #fff;
 }
+
+.site-link {
+  background: var(--background-Github);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 8px;
+}
+
+.site-link:hover {
+  background: #fff;
+  color: var(--background-Github);
+  border: 1px solid var(--accent);
+}
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
   color: var(--muted);
 }
+
 
 /* Responsive adjustments */
 @media(max-width: 1477px) {

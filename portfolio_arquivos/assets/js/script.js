@@ -45,25 +45,38 @@ fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=10
       return;
     }
 
-    repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-    projectsContainer.innerHTML = repos.map(repo => {
-      const lang = repo.language || 'N/A';
-      const icon = langIcons[lang] || langIcons['N/A'];
-      const isFeatured = repo.stargazers_count >= 10;
-      return `
-        <div class="project-card${isFeatured ? ' featured' : ''}">
-          <div class="project-lang">${icon} ${lang}</div>
-          <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-          <p>${repo.description ? repo.description : 'Sem descrição.'}</p>
-          <div class="project-meta">
-            <span class="star">⭐ ${repo.stargazers_count}</span>
-            <span class="fork">🍴 ${repo.forks_count}</span>
-            <span class="date">Atualizado: ${new Date(repo.updated_at).toLocaleDateString('pt-BR')}</span>
-          </div>
-          <a class="repo-link" href="${repo.html_url}" target="_blank">Ver no GitHub</a>
-        </div>
-      `;
-    }).join('');
+  projectsContainer.innerHTML = repos.map(repo => {
+  const lang = repo.language || 'N/A';
+  const icon = langIcons[lang] || langIcons['N/A'];
+  const isFeatured = repo.stargazers_count >= 10;
+
+  // imagem de fundo (use nome do repo para montar caminho local)
+  const imageMap = {
+  'portfolio-front-end-rodrigo': 'portfolio-preview.png',
+  'ProjetoDevLinks': 'devlinks-preview.png',
+  'RodrigoStukas': 'apresentacao-preview.png',
+};
+
+const imagePath = `assets/img/${imageMap[repo.name] || 'default.png'}`;
+
+return `
+  <div class="project-card${isFeatured ? ' featured' : ''}">
+    <img class="project-image" src="${imagePath}" alt="Preview do projeto ${repo.name}">
+    <div class="project-overlay">
+      <div class="project-lang">${icon} ${lang}</div>
+      <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+      <p>${repo.description ? repo.description : 'Sem descrição.'}</p>
+      <div class="project-meta">
+        <span class="star">⭐ ${repo.stargazers_count}</span>
+        <span class="date">Atualizado: ${new Date(repo.updated_at).toLocaleDateString('pt-BR')}</span>
+      </div>
+      <a class="repo-link" href="${repo.html_url}" target="_blank"><i class="devicon-github-original"></i> Ver no GitHub</a>
+      ${repo.homepage ? `<a class="site-link" href="${repo.homepage}" target="_blank">🌐 Ver Site</a>` : ''}
+    </div>
+  </div>
+`;
+}).join('');
+
   })
   .catch(() => {
     projectsContainer.innerHTML = '<p>Erro ao carregar projetos do GitHub.</p>';

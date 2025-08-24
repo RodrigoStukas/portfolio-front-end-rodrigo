@@ -71,7 +71,7 @@ return `
         <span class="date">Atualizado: ${new Date(repo.updated_at).toLocaleDateString('pt-BR')}</span>
       </div>
       <a class="repo-link" href="${repo.html_url}" target="_blank"><i class="devicon-github-original"></i> Ver no GitHub</a>
-      ${repo.homepage ? `<a class="site-link" href="${repo.homepage}" target="_blank">🌐 Ver Site</a>` : ''}
+      ${repo.homepage ? `<a class="site-link" href="${repo.homepage}" target="_blank"><i class="fa-solid fa-globe" style="color: inherit; margin-right: 6px;"></i> Ver Site</a>` : ''}
     </div>
   </div>
 `;

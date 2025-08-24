@@ -53,7 +53,7 @@ fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=10
   // imagem de fundo (use nome do repo para montar caminho local)
   const imageMap = {
   'portfolio-front-end-rodrigo': 'portfolio-preview.png',
-  'ProjetoDevLinks': 'devlinks-preview.png',
+  'ProjetoRodrigo': 'devlinks-preview.png',
   'RodrigoStukas': 'apresentacao-preview.png',
 };
 

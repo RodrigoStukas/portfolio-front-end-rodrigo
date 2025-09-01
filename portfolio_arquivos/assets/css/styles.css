@@ -12,6 +12,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+main p {
+  text-indent: 30px;
+}
+
 :root {
   --bg: #fdfdfd;
   --bg-header: #fdfdfd;
@@ -72,7 +76,6 @@ html[data-theme="dark"] {
   --accent: var(--dark-accent);
   --text-title: var(--dark-text-title);
   --shadow-color: var(--dark-shadow-color);
-  --title-color-projects: var(--dark-title-color-projects);
   --background-projects: var(--dark-background-projects);
   --background-Github: var(--dark-background-Github);
   --bottom: var(--dark-bottom);
@@ -253,11 +256,13 @@ html[data-theme="dark"] {
   color: inherit;
 }
 
+
 /* HERO */
 .hero {
   padding: 80px 0;
   display: flex;
 }
+
 
 .hero-inner {
   display: flex;
@@ -370,6 +375,26 @@ html[data-theme="dark"] {
   line-height: 1.7;
 }
 
+.about p strong {
+  color: var(--text-title);
+  font-weight: bold;
+}
+
+.about ul li {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 6px;
+  list-style-type: disc;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.about ul li strong {
+  color: var(--text-title);
+}
+
 /* Skills grid */
   .skills-grid {
     display: grid;
@@ -460,6 +485,10 @@ html[data-theme="dark"] {
     margin: 0 auto;
     color: var(--muted);
     line-height: 1.7;
+}
+
+.goals p strong {
+  color: var(--text-title);
 }
 /* Barra de progresso de habilidades e linguagens */
 .bar {
@@ -595,7 +624,7 @@ color: var(--title-color-projects);
 }
 .project-card h3 a,
 .project-card h3 a:visited {
-  color: var(--title-color-projects);
+  color: var(--text-title);
   text-decoration: none;
 }
 
@@ -628,6 +657,12 @@ color: var(--title-color-projects);
   color: var(--muted);
 }
 
+.date {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-title);
+  margin-bottom: 4px;
+}
 
 /* Responsive adjustments */
 @media(max-width: 1477px) {

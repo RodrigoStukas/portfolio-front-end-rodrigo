@@ -386,8 +386,6 @@ html[data-theme="dark"] {
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 6px;
-  list-style-type: disc;
-  margin-left: 20px;
   font-weight: bold;
 }
 

@@ -50,7 +50,7 @@ fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=10
   const icon = langIcons[lang] || langIcons['N/A'];
   const isFeatured = repo.stargazers_count >= 10;
 
-  // imagem de fundo (use nome do repo para montar caminho local)
+  // imagem de fundo do projeto
   const imageMap = {
   'portfolio-front-end-rodrigo': 'portfolio-preview.png',
   'ProjetoRodrigo': 'devlinks-preview.png',

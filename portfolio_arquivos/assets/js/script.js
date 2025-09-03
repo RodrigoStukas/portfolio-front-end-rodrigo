@@ -55,6 +55,7 @@ fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=10
   'portfolio-front-end-rodrigo': 'portfolio-preview.png',
   'ProjetoRodrigo': 'devlinks-preview.png',
   'RodrigoStukas': 'apresentacao-preview.png',
+  'html-css': 'html-css-preview.png',
 };
 
 const imagePath = `assets/img/${imageMap[repo.name] || 'default.png'}`;

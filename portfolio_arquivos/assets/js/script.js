@@ -58,6 +58,13 @@ fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=10
   'html-css': 'html-css-preview.png',
 };
 
+const siteMap = {
+  'html-css': 'https://rodrigostukas.github.io/html-css/desafio/desafio%2010/',
+  'portfolio-front-end-rodrigo': 'https://rodrigostukas.github.io/portfolio-front-end-rodrigo/',
+  'ProjetoRodrigo': 'https://rodrigostukas.github.io/ProjetoRodrigo/'
+};
+
+
 const imagePath = `assets/img/${imageMap[repo.name] || 'default.png'}`;
 
 return `
@@ -71,14 +78,16 @@ return `
         <span class="star">⭐ ${repo.stargazers_count}</span>
         <span class="date">Atualizado: ${new Date(repo.updated_at).toLocaleDateString('pt-BR')}</span>
       </div>
-      <a class="repo-link" href="${repo.html_url}" target="_blank"><i class="devicon-github-original"></i> Ver no GitHub</a>
-      ${repo.homepage ? `<a class="site-link" href="${repo.homepage}" target="_blank"><i class="fa-solid fa-globe" style="color: inherit; margin-right: 6px;"></i> Ver Site</a>` : ''}
+      <a class="repo-link" href="${repo.html_url}" target="_blank">
+        <i class="devicon-github-original"></i> Ver no GitHub
+      </a>
+      ${(repo.homepage || siteMap[repo.name]) 
+        ? `<a class="site-link" href="${repo.homepage || siteMap[repo.name]}" target="_blank">
+             <i class="fa-solid fa-globe" style="color: inherit; margin-right: 6px;"></i> Ver Site
+           </a>` 
+        : ''}
     </div>
   </div>
 `;
 }).join('');
-
-  })
-  .catch(() => {
-    projectsContainer.innerHTML = '<p>Erro ao carregar projetos do GitHub.</p>';
-  });
+});

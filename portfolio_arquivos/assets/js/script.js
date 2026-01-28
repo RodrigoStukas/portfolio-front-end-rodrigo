@@ -30,6 +30,7 @@ trdThemeBtn.addEventListener('click', () => {
 const githubUser = "RodrigoStukas";
 const projectsContainer = document.getElementById('github-projects');
 const langIcons = {
+  'C#': '<i class="devicon-csharp-plain" style="color:#239120"></i>', // Adicionando ícone do C#
   'JavaScript': '<i class="fab fa-js-square" style="color:#f7df1e"></i>',
   'TypeScript': '<i class="fab fa-js" style="color:#3178c6"></i>',
   'HTML': '<i class="fab fa-html5" style="color:#e34c26"></i>',
@@ -40,6 +41,8 @@ const langIcons = {
 fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=100`)
   .then(res => res.json())
   .then(repos => {
+    console.log(repos); // Verifique a resposta da API
+
     if (!Array.isArray(repos) || repos.length === 0) {
       projectsContainer.innerHTML = '<p>Nenhum projeto encontrado.</p>';
       return;
@@ -56,6 +59,7 @@ fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=10
   'ProjetoRodrigo': 'devlinks-preview.png',
   'RodrigoStukas': 'apresentacao-preview.png',
   'html-css': 'html-css-preview.png',
+  'banking-api-dotnet': 'banking-api.png',
 };
 
 const siteMap = {

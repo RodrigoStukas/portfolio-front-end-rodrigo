@@ -1,0 +1,52 @@
+[
+  {
+    "name": "portfolio-front-end-rodrigo",
+    "description": "Portfólio pessoal desenvolvido com HTML5, CSS3 e JavaScript, apresentando projetos e habilidades.",
+    "html_url": "https://github.com/RodrigoStukas/portfolio-front-end-rodrigo",
+    "language": "CSS",
+    "stargazers_count": 0,
+    "updated_at": "2025-01-28T00:00:00Z",
+    "homepage": "https://rodrigostukas.github.io/portfolio-front-end-rodrigo/",
+    "fork": false
+  },
+  {
+    "name": "ProjetoRodrigo",
+    "description": "Projeto de DevLinks - coleção de links pessoais com design moderno e responsivo.",
+    "html_url": "https://github.com/RodrigoStukas/ProjetoRodrigo",
+    "language": "HTML",
+    "stargazers_count": 0,
+    "updated_at": "2025-01-28T00:00:00Z",
+    "homepage": "https://rodrigostukas.github.io/ProjetoRodrigo/",
+    "fork": false
+  },
+  {
+    "name": "html-css",
+    "description": "Projetos de estudo com HTML5 e CSS3, incluindo desafios e exercícios práticos.",
+    "html_url": "https://github.com/RodrigoStukas/html-css",
+    "language": "HTML",
+    "stargazers_count": 0,
+    "updated_at": "2025-01-28T00:00:00Z",
+    "homepage": "https://rodrigostukas.github.io/html-css/desafio/desafio%2010/",
+    "fork": false
+  },
+  {
+    "name": "banking-api-dotnet",
+    "description": "API REST de Banco desenvolvida com C# e .NET, com integração de banco de dados.",
+    "html_url": "https://github.com/RodrigoStukas/banking-api-dotnet",
+    "language": "C#",
+    "stargazers_count": 0,
+    "updated_at": "2025-01-28T00:00:00Z",
+    "homepage": null,
+    "fork": false
+  },
+  {
+    "name": "econverse-front-end",
+    "description": "Criação de uma homepage da Econverse em React e TypeScript com SASS",
+    "html_url": "https://github.com/RodrigoStukas/econverse-front-end",
+    "language": "TypeScript",
+    "stargazers_count": 1,
+    "updated_at": "2025-10-26T00:00:00Z",
+    "homepage": null,
+    "fork": false
+  }
+]

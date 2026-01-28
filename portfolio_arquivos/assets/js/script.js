@@ -10,6 +10,7 @@ trdMenuBtn.addEventListener('click', () => {
 });
 
 // alternar tema (salvar escolha no localStorage)
+const themeIcon = document.getElementById('themeIcon');
 const storedTheme = localStorage.getItem('trd_theme');
 if (storedTheme) {
   htmlEl.setAttribute('data-theme', storedTheme);
@@ -38,20 +39,36 @@ const langIcons = {
   'N/A': '<i class="fas fa-question-circle" style="color:#888"></i>'
 };
 
-fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated&per_page=100`)
-  .then(res => res.json())
+// Carregar projetos do arquivo JSON local
+fetch('assets/data/projects.json')
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+    }
+    return res.json();
+  })
   .then(repos => {
-    console.log(repos); // Verifique a resposta da API
+    console.log('Projetos carregados:', repos);
 
     if (!Array.isArray(repos) || repos.length === 0) {
       projectsContainer.innerHTML = '<p>Nenhum projeto encontrado.</p>';
       return;
     }
 
-  projectsContainer.innerHTML = repos.map(repo => {
+    // Filtrar repositórios que não são forks e ordenar por data
+    const filteredRepos = repos
+      .filter(repo => !repo.fork)
+      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    
+    if (filteredRepos.length === 0) {
+      projectsContainer.innerHTML = '<p>Nenhum projeto encontrado.</p>';
+      return;
+    }
+
+  projectsContainer.innerHTML = filteredRepos.map(repo => {
   const lang = repo.language || 'N/A';
   const icon = langIcons[lang] || langIcons['N/A'];
-  const isFeatured = repo.stargazers_count >= 10;
+  const isFeatured = repo.stargazers_count >= 1;
 
   // imagem de fundo do projeto
   const imageMap = {
@@ -68,12 +85,12 @@ const siteMap = {
   'ProjetoRodrigo': 'https://rodrigostukas.github.io/ProjetoRodrigo/'
 };
 
-
-const imagePath = `assets/img/${imageMap[repo.name] || 'default.png'}`;
+const imagePath = `assets/img/${imageMap[repo.name]}`;
+const hasImage = imageMap[repo.name];
 
 return `
   <div class="project-card${isFeatured ? ' featured' : ''}">
-    <img class="project-image" src="${imagePath}" alt="Preview do projeto ${repo.name}">
+    ${hasImage ? `<img class="project-image" src="${imagePath}" alt="Preview do projeto ${repo.name}" loading="lazy">` : `<div class="project-image" style="background: transparent;"></div>`}
     <div class="project-overlay">
       <div class="project-lang">${icon} ${lang}</div>
       <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
@@ -94,4 +111,8 @@ return `
   </div>
 `;
 }).join('');
-});
+  })
+  .catch(error => {
+    console.error('Erro ao carregar projetos:', error);
+    projectsContainer.innerHTML = `<p>Erro ao carregar projetos: ${error.message}</p>`;
+  });

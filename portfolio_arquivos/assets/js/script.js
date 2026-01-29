@@ -31,7 +31,7 @@ trdThemeBtn.addEventListener('click', () => {
 const githubUser = "RodrigoStukas";
 const projectsContainer = document.getElementById('github-projects');
 const langIcons = {
-  'C#': '<i class="devicon-csharp-plain" style="color:#239120"></i>', // Adicionando ícone do C#
+  'C#': '<i class="devicon-csharp-plain" style="color:#239120"></i>', 
   'JavaScript': '<i class="fab fa-js-square" style="color:#f7df1e"></i>',
   'TypeScript': '<i class="fab fa-js" style="color:#3178c6"></i>',
   'HTML': '<i class="fab fa-html5" style="color:#e34c26"></i>',
